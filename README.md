@@ -15,5 +15,6 @@
 
 # 运行代码
 
-对于单文件程序，如sample.go，直接运行go run sample.go即可
+对于单文件程序，如sample.go，直接运行go run sample.go即可。
+
 对于多文件的复杂样例，直接 go run 主程序文件即可
