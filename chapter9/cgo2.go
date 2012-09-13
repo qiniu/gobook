@@ -1,4 +1,4 @@
-package main 
+package hello
 
 /*
 #include <stdio.h>
@@ -9,9 +9,5 @@ void hello() {
 import "C"
 
 func Hello() {
-  C.hello()
-}
-
-func main() {
-  Hello()
+	C.hello()
 }
