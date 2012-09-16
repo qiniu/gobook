@@ -1,4 +1,4 @@
-all: thread channel goroutine goroutine2 cgss/bin/cgss
+all: thread channel goroutine goroutine2 cgss.build
 
 thread: thread.c
 	gcc thread.c -lpthread -o thread
@@ -12,7 +12,7 @@ goroutine: goroutine.go
 goroutine2: goroutine2.go
 	go build goroutine2.go
 
-cgss/bin/cgss:
+cgss.build:
 	cd cgss; go install -v ./...
 
 clean:

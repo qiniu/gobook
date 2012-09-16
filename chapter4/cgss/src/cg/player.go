@@ -5,10 +5,10 @@ import (
 )
 
 type Player struct {
-    Name string "name"
-    Level int "level"
-    Exp int "exp"
-    Room int "room"
+    Name string
+    Level int
+    Exp int
+    Room int
 
     mq chan *Message // 等待收取的消息
 }

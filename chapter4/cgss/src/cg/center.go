@@ -10,9 +10,9 @@ import (
 var _ ipc.Server = &CenterServer{} // 确认实现了Server接口
 
 type Message struct {
-    From string "from"
-    To string "to"
-    Content string "content"
+    From string `json:"from"`
+    To string `json:"to"`
+    Content string `json:"content"`
 }
 
 type CenterServer struct {
