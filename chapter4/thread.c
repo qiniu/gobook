@@ -11,7 +11,7 @@ main()
 	int rc1, rc2;
     pthread_t thread1, thread2;
 
-	/* 创建线程，每个线程独立执行函数functionC */
+	/* 创建线程，每个线程独立执行函数function count */
 
 	if((rc1 = pthread_create(&thread1, NULL, &count, NULL)))
     {

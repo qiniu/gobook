@@ -3,7 +3,6 @@ package cg
 import (
     "errors"
     "encoding/json"
-    
     "ipc"
 )
 

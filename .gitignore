@@ -1,2 +1,9 @@
 a.out
+bin/
+pkg/
+
+chapter4/channel
+chapter4/goroutine
+chapter4/goroutine2
+chapter4/thread
 
