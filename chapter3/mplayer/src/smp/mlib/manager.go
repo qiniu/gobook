@@ -45,16 +45,7 @@ func (m *MusicManager) Remove(index int) *MusicEntry {
 	}
 
 	removedMusic := &m.musics[index]
-
-	// Remove the found item from the slice.
-	if index > 0 && index < len(m.musics)-1 { // Element between first and last
-		m.musics = append(m.musics[:index], m.musics[index+1:]...)
-	} else if index == 0 { // empty it.
-		m.musics = m.musics[1:]
-	} else { // The last element
-		m.musics = m.musics[:index]
-	}
-
+	m.musics = append(m.musics[:index], m.musics[index+1:]...)
 	return removedMusic
 }
 
@@ -70,3 +61,4 @@ func (m *MusicManager) RemoveByName(name string) *MusicEntry {
     }
     return nil
 }
+

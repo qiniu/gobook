@@ -6,9 +6,8 @@ import (
 	"os"
 	"strconv"
 	"strings"
-
-	"pkg/smp/mlib"
-	"pkg/smp/mp"
+	"smp/mlib"
+	"smp/mp"
 )
 
 var lib *mlib.MusicManager
