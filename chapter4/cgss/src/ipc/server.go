@@ -6,13 +6,13 @@ import (
 )
 
 type Request struct {
-    Method string "method"
-    Params string "params"
+    Method string `json:"method"`
+    Params string `json:"params"`
 }
 
 type Response struct {
-    Code string "code"
-    Body string "body"
+    Code string `json:"code"`
+    Body string `json:"body"`
 }
 
 type Server interface {

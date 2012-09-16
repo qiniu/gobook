@@ -13,7 +13,7 @@ goroutine2: goroutine2.go
 	go build goroutine2.go
 
 cgss/bin/cgss:
-	cd cgss/src/cgss; go build -v
+	cd cgss; go install -v ./...
 
 clean:
 	rm -f channel goroutine goroutine2 thread
