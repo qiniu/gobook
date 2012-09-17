@@ -18,12 +18,11 @@ const (
     TEMPLATE_DIR = "./views"
 )
 
-var templates map[string]*template.Template
+var templates = make(map[string]*template.Template)
 
 func init() {
     fileInfoArr, err := ioutil.ReadDir(TEMPLATE_DIR)
     check(err)
-    templates = make(map[string]*template.Template)
 
     var templateName, templatePath string
 

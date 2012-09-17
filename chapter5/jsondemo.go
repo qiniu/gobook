@@ -16,11 +16,11 @@ func main() {
         }
         for k := range v {
             if k != "Title" {
-                v[k] = nil
+                delte(v, k)
             }
         }
         if err := enc.Encode(&v); err != nil {
             log.Println(err)
         }
     }
-} 
+}
