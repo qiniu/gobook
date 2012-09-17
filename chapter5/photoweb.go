@@ -23,7 +23,6 @@ var templates = make(map[string]*template.Template)
 func init() {
     fileInfoArr, err := ioutil.ReadDir(TEMPLATE_DIR)
     check(err)
-
     var templateName, templatePath string
 
     for _, fileInfo := range fileInfoArr {
@@ -66,14 +65,14 @@ func isExists(path string) (bool, error) {
 
 func uploadHandler(w http.ResponseWriter, r *http.Request) {
     if r.Method == "GET" {
-        renderHtml(w, "upload", nil);
+        renderHtml(w, "upload.html", nil);
     }
     if r.Method == "POST" {
         f, h, err := r.FormFile("image")
         check(err)
         filename := h.Filename
         defer f.Close()
-        t, err := ioutil.TempFile(UPLOAD_DIR, filename)
+        t, err := os.Create(UPLOAD_DIR + "/" + filename)
         check(err)
         defer t.Close()
         _, err = io.Copy(t, f)
@@ -104,7 +103,7 @@ func listHandler(w http.ResponseWriter, r *http.Request) {
         images = append(images, fileInfo.Name())
     }
     locals["images"] = images
-    renderHtml(w, "list", locals)
+    renderHtml(w, "list.html", locals)
 }
 
 func safeHandler(fn http.HandlerFunc) http.HandlerFunc {
