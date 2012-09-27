@@ -4,9 +4,9 @@ package main
 
 import "fmt"
 
-func sum(values []int, resu功能。
-下面我们用一个简单的例子来演示 Goroutine 和 Channel 的使用方式
-ltChan chan int) {
+
+//下面我们用一个简单的例子来演示 Goroutine 和 Channel 的使用方式
+func sum(values []int, resultChan chan int) {
     sum := 0
     for _, value := range values {
         sum += value
