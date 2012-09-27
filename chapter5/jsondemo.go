@@ -16,7 +16,7 @@ func main() {
         }
         for k := range v {
             if k != "Title" {
-                delte(v, k)
+                delete(v, k)
             }
         }
         if err := enc.Encode(&v); err != nil {
