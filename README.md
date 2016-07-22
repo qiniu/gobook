@@ -8,7 +8,7 @@
 
 2) 打开 ~/.bashrc，加入： 
 
-    export $GOBOOK=~/gobook  #假设代码在 ~/gobook 下
+    export GOBOOK=~/gobook  #假设代码在 ~/gobook 下
     source $GOBOOK/env.sh
 
 3) 保存 ~/.bashrc，并 source 之
